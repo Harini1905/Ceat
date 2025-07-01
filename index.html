@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre for e-Automation Technologies (CeAT)</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Add horizontal padding for all tables and main text content */
+        .container,
+        .facilities-table-wrapper,
+        .products-table-wrapper,
+        .consultancy-summary-table-wrapper,
+        .consultancy-projects-table-wrapper,
+        .journal-publications-table-wrapper,
+        .journal-publications-overview-table-wrapper,
+        .info-card-details,
+        .tab-content,
+        .about-content,
+        .research-grid,
+        .vision-mission .container,
+        .jp-accordion-body,
+        .jp-list,
+        .cta-buttons,
+        .footer-content,
+        .footer-bottom,
+        .modal-content {
+            padding-left: 16px;
+            padding-right: 16px;
+            box-sizing: border-box;
+        }
+        /* For tables that may overflow, keep horizontal scroll but add padding */
+        .facilities-table-wrapper,
+        .products-table-wrapper,
+        .consultancy-summary-table-wrapper,
+        .consultancy-projects-table-wrapper,
+        .journal-publications-table-wrapper,
+        .journal-publications-overview-table-wrapper {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        /* For mobile, increase padding for better readability */
+        @media (max-width: 600px) {
+            .container,
+            .facilities-table-wrapper,
+            .products-table-wrapper,
+            .consultancy-summary-table-wrapper,
+            .consultancy-projects-table-wrapper,
+            .journal-publications-table-wrapper,
+            .journal-publications-overview-table-wrapper,
+            .info-card-details,
+            .tab-content,
+            .about-content,
+            .research-grid,
+            .vision-mission .container,
+            .jp-accordion-body,
+            .jp-list,
+            .cta-buttons,
+            .footer-content,
+            .footer-bottom,
+            .modal-content {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Orb Hero Section -->
+    <section class="orb-hero">
+        <div class="orb-container">
+            <div class="orb"></div>
+            <div class="orb-text">CeAT</div>
+        </div>
+    </section>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <h1>CeAT</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-btn" aria-label="Open navigation menu" tabindex="0">
+            <div class="menu-btn__burger"></div>
+        </div>
+        <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Centre for e-Automation Technologies</h1>
+            <p class="animate-text">Accelerating research and innovation in automation technologies</p>
+            <div class="cta-buttons">
+                <a href="#about" class="cta-primary ripple">Learn More</a>
+                <a href="#contact" class="cta-secondary ripple" id="openContactModal">Contact Us</a>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About CeAT</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Centre for e-Automation Technologies (CeAT) was established in 2020 to accelerate research and product development in automation technologies. We provide a collaborative platform for faculty and students across disciplines to achieve greater goals through innovative research and development.</p>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <i class="fas fa-robot"></i>
+                        <h3>Robotics</h3>
+                        <p>Smart & Assistive</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-industry"></i>
+                        <h3>Automation</h3>
+                        <p>Smart Factory</p>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-print"></i>
+                        <h3>Manufacturing</h3>
+                        <p>3D Printing</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="research">
+        <div class="container">
+            <h2 class="section-title">Research Areas</h2>
+            <div class="research-grid">
+                <div class="research-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>Robotics</h3>
+                    <p>Assistive rehabilitation and smart robots</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Smart Grid</h3>
+                    <p>Advanced automation solutions</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-print"></i>
+                    <h3>Additive Manufacturing</h3>
+                    <p>3D printing technologies</p>
+                </div>
+                <div class="research-card">
+                    <i class="fas fa-industry"></i>
+                    <h3>Industrial Automation</h3>
+                    <p>Flexible process automation</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision, Mission & Objectives Section -->
+    <section id="vision-mission" class="vision-mission">
+        <div class="container">
+            <h2 class="section-title">Vision, Mission & Objectives</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Vision</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-body" hidden>
+                        <p>
+                            To become a globally recognized leader in automation technologies, driving innovation and transforming industries through interdisciplinary research and cutting-edge solutions
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Mission</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-body" hidden>
+                        <p>
+                            Our mission is to foster interdisciplinary collaboration among academia, industry, and researchers to innovate and deliver sustainable automation solutions. We aim to empower industries through advanced technologies, enhance skill development, and contribute to societal progress by addressing real-world challenges
+                        </p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Objectives</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-body" hidden>
+                        <ul>
+                            <li>
+                                Foster world-class innovative research by publishing at least 20 high-impact papers and developing 5 smart automation solutions for manufacturing industries within the next five years to address societal and industrial challenges
+                            </li>
+                            <li>
+                                Collaborate across disciplines, including mechanical engineering, computer science, and advanced sciences, to develop at least 10 integrated automation systems tailored for industries such as healthcare, energy, and manufacturing within the next three years.
+                            </li>
+                            <li>
+                                Establish strategic partnerships with at least 15 industries, academic institutions, and research organizations within the next three years to facilitate knowledge exchange, execute 5 technology transfer projects, and complete 10 consultancy projects annually.
+                            </li>
+                            <li>
+                                Nurture entrepreneurial ventures by incubating at least 10 start-ups annually and providing technical support to develop scalable automation solutions, with a target of 3 successful commercial deployments within five years
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subdivisions Section -->
+    <section id="subdivisions" class="subdivisions">
+        <div class="container">
+            <h2 class="section-title">CeAT Subdivisions</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="thrust">Thrust Areas</button>
+                <button class="tab-btn" data-tab="facilities">Major Facilities</button>
+                <button class="tab-btn" data-tab="products">Sponsored Products</button>
+                <button class="tab-btn" data-tab="consultancy">Consultancy Projects</button>
+            </div>
+            <div class="tab-content active" id="tab-thrust">
+                <h3>Mechatronics & Automation</h3>
+                <p>
+                    Mechatronics & Automation integrates mechanical engineering, electronics, and computer science to design intelligent systems that operate with minimal human intervention. This field is pivotal in developing advanced robotics, smart manufacturing systems, and autonomous technologies. For CeAT, this thrust area supports the creation of flexible industrial processes, assistive rehabilitation robots, and autonomous systems, driving innovation in automation aligning with Industry 4.0 principles.
+                </p>
+                <h3>3D Printing and Scanning</h3>
+                <p>
+                    3D printing (additive manufacturing) and scanning revolutionize production by enabling rapid prototyping, customization, and cost-effective manufacturing. These technologies are widely used in aerospace, healthcare, automotive, and construction for creating complex, lightweight components. At CeAT, research in this area focuses on advancing materials, improving printing accuracy, and integrating hybrid manufacturing techniques which contributes to sustainable manufacturing practices and supports the development of customized solutions for various industries.
+                </p>
+                <h3>AIML and Image Processing</h3>
+                <p>
+                    Artificial Intelligence (AI), Machine Learning (ML), and Image Processing empower systems to learn, analyze visual data, and make intelligent decisions. Applications include predictive maintenance, quality control, healthcare diagnostics, and autonomous navigation. CeAT leverages these technologies to develop intelligent manufacturing systems, optimize processes, and enhance automation in healthcare and surveillance.
+                </p>
+                <h3>Energy Automation</h3>
+                <p>
+                    Energy automation focuses on optimizing energy generation, distribution, and consumption using advanced technologies like smart grids and renewable energy integration. This field addresses global challenges such as energy efficiency, sustainability, and reliable power supply. At CeAT, research in energy automation includes developing predictive models for energy usage, fault detection, and integrating renewable sources into existing grids.
+                </p>
+                <h3>Condition Monitoring (CM)</h3>
+                <p>
+                    Machinery Condition Monitoring (MCM) uses sensors and data analytics to assess the health and performance of industrial machinery in real-time. MCM ensures operational safety, extends the lifespan of equipment, and reduces maintenance costs by detecting anomalies, predicting failures, and enabling proactive interventions. CeAT’s focus on MCM involves developing advanced sensor networks and AI-driven predictive models to monitor parameters such as vibration, temperature, and wear.
+                </p>
+            </div>
+            <div class="tab-content" id="tab-facilities">
+                <div class="facilities-table-wrapper">
+                    <table class="facilities-table">
+                        <thead>
+                            <tr>
+                                <th>Name of the Equipment</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Creafom 3D Scanner</td>
+                                <td>
+                                    The Creaform 3D Scanner is a cutting-edge portable scanning solution that delivers high-precision 3D measurements, making it ideal for applications in reverse engineering, quality control, and product design
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>FPGA Kit</td>
+                                <td>
+                                    FPGA (Field-Programmable Gate Array) kit is a versatile hardware development platform that allows engineers, researchers, and students to design, prototype, and test digital circuits and systems. Unlike traditional processors, FPGAs are reconfigurable integrated circuits that can be programmed to perform specific tasks, making them ideal for applications requiring high performance, parallel processing, and real-time operations
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Basler Vision Camera with Lens</td>
+                                <td>
+                                    The Basler Vision Camera is a cornerstone of modern industrial automation and machine vision systems. Its ability to deliver high-quality imaging, coupled with its adaptability and ease of integration, makes it an indispensable tool for industries striving for efficiency and accuracy.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>MyRIO Kit</td>
+                                <td>
+                                    The MyRIO (my Reconfigurable Input/Output) kit is an innovative, compact, and versatile hardware platform. Designed for students, educators, and engineers, the MyRIO enables hands-on learning and rapid prototyping of real-world engineering systems. It combines the power of a reconfigurable FPGA (Field-Programmable Gate Array) with a dual-core ARM processor, making it ideal for applications in robotics, embedded systems, control systems, and Internet of Things (IoT) projects.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NI 9234 DAQ</td>
+                                <td>
+                                    The NI 9234 is a high-performance, 4-channel C Series module developed by National Instruments (NI) for dynamic signal acquisition. It is specifically designed for applications requiring high-accuracy measurements of sound, vibration, and other dynamic signals in industrial, research, and educational settings.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Siemens S7 1200 PLC</td>
+                                <td>
+                                    The Siemens S7-1200 PLC (Programmable Logic Controller) is a compact, modular, and versatile automation controller designed for small to medium-sized industrial applications. It is part of Siemens’ SIMATIC family of controllers and is widely used in industries such as manufacturing, process control, building automation, and machine automation.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Goniometer Sensor</td>
+                                <td>
+                                    A goniometer sensor is a specialized device used to measure angles or angular displacement. It is commonly employed in applications requiring precise measurement of joint movements, orientations, or rotational positions. Goniometers are widely used in fields such as biomechanics, robotics, physical therapy, and industrial automation.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>EMG (Electromyography) sensor</td>
+                                <td>
+                                    An EMG (Electromyography) sensor by Biometrics is a specialized device used to measure the electrical activity produced by skeletal muscles. It captures the signals generated during muscle contraction and relaxation, providing insights into muscle function, fatigue, and activation patterns. Biometrics is a leading provider of high-quality, wearable EMG sensors, widely used in research, sports science, rehabilitation, and ergonomics.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-products">
+                <div class="products-table-wrapper">
+                    <table class="products-table">
+                        <thead>
+                            <tr>
+                                <th>S. No</th>
+                                <th>Academic Year</th>
+                                <th>Title</th>
+                                <th>Amount<br>(Lakhs)</th>
+                                <th>Funding Agency</th>
+                                <th>Duration</th>
+                                <th>Status</th>
+                                <th>Outcome</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2021 – 2022</td>
+                                <td>Solar Thermic Cooking Device</td>
+                                <td>9.5</td>
+                                <td>
+                                    <img src="img/sponsor1.png" alt="Sponsor 1" class="sponsor-logo" title="Sponsor 1" />
+                                </td>
+                                <td>1 Year</td>
+                                <td>Completed</td>
+                                <td>Lab scaled prototype; One patent filed</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>2021 – 2022</td>
+                                <td>Capability Building and Collaborative Research on Developing an Electric Compact Tractor for Sustainable Family Farming</td>
+                                <td>77</td>
+                                <td>
+                                    <img src="img/sponsor2.png" alt="Sponsor 2" class="sponsor-logo" title="Sponsor 2" />
+                                </td>
+                                <td>2 Years</td>
+                                <td>Completed</td>
+                                <td>Developed compact e-tractor;<br>Developed Electric Motor for the e-Vehicle application</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>2022 – 2023</td>
+                                <td>Development of an Integrated electromotive Retrofit Wheel for Bicycle Electrification</td>
+                                <td>5.79</td>
+                                <td>
+                                    <img src="img/sponsor3.png" alt="Sponsor 3" class="sponsor-logo" title="Sponsor 3" />
+                                </td>
+                                <td>2 Years</td>
+                                <td>On-going</td>
+                                <td>New product</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>2023 – 2024</td>
+                                <td>Agricultural Revitalization in Higher Education Institutions of Asian Countries</td>
+                                <td>726</td>
+                                <td>
+                                    <img src="img/sponsor4.png" alt="Sponsor 4" class="sponsor-logo" title="Sponsor 4" />
+                                </td>
+                                <td>3 Years</td>
+                                <td>On-going</td>
+                                <td>AGRHI hub;<br>Technology Transfer to students and farmers</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>2024 – 2025</td>
+                                <td>Specific spine & Smart 3D-Printed Orthoses with Real-Time Monitoring in Scoliosis</td>
+                                <td>14.507</td>
+                                <td>
+                                    <img src="img/sponsor5.png" alt="Sponsor 5" class="sponsor-logo" title="Sponsor 5" />
+                                </td>
+                                <td>1 Year</td>
+                                <td>On-going</td>
+                                <td>New product</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="tab-content" id="tab-consultancy">
+                <h3>Summary</h3>
+                <div class="consultancy-summary-table-wrapper">
+                    <table class="consultancy-summary-table">
+                        <thead>
+                            <tr>
+                                <th>S. No</th>
+                                <th>Academic Year</th>
+                                <th>No. of Consultancy Projects</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>1</td><td>2021-2022</td><td>08</td></tr>
+                            <tr><td>2</td><td>2022-2023</td><td>08</td></tr>
+                            <tr><td>3</td><td>2023-2024</td><td>15</td></tr>
+                            <tr><td>4</td><td>2024-2025</td><td>10</td></tr>
+                            <tr>
+                                <td colspan="3" style="text-align:right;font-style:italic;">(As on 31.01.2025)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <h3>Consultancy Projects</h3>
+                <div class="consultancy-projects-table-wrapper">
+                    <table class="consultancy-projects-table">
+                        <thead>
+                            <tr>
+                                <th>S. No</th>
+                                <th>Name of the Faculty</th>
+                                <th>Title of the Consultancy</th>
+                                <th>Industry</th>
+                                <th>Amount Generated</th>
+                                <th>AY & Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Dr. V. Sumathi<br>Dr. K. Iyswarya Annapoorani</td>
+                                <td>Development of CM module</td>
+                                <td>Delta Plastic Solutions</td>
+                                <td>25960</td>
+                                <td>2024-2025<br>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Dr Rajakumar R<br>Dr Padamanaban R (SCOPE)</td>
+                                <td>Development of Website</td>
+                                <td>Ashok Constructions</td>
+                                <td>32450</td>
+                                <td>2024-2025<br>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Dr. Jegadeeshwaran<br>Dr. Murali Mohan G (SMEC)<br>Dr. Sakthivel G (SMEC)<br>Dr. Sivakumar R (SMEC)</td>
+                                <td>Driving Simulator Training</td>
+                                <td>Jayalakshmi Driving School</td>
+                                <td>59000</td>
+                                <td>On-going</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Dr. Jegadeeshwaran<br>Dr. Murali Mohan G (SMEC)<br>Dr. Sakthivel G (SMEC)<br>Dr. Sivakumar R (SMEC)</td>
+                                <td>Driving Simulator Training</td>
+                                <td>Jayalakshmi Driving School</td>
+                                <td>37760</td>
+                                <td>2024-2025<br>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Dr. Raghukiran N<br>Dr. Lenin Babu M C (SMEC)<br>Dr. Annamalai K (SMEC)</td>
+                                <td>3D Scanning</td>
+                                <td>Precise 3D Metrology and Design solutions PVT ltd, Chennai</td>
+                                <td>17700</td>
+                                <td>2024-2025<br>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Dr. Raghukiran N<br>Dr. Lenin Babu M C (SMEC)<br>Dr. Annamalai K (SMEC)</td>
+                                <td>3D Scanning</td>
+                                <td>Precise 3D Metrology and Design solutions PVT ltd, Chennai</td>
+                                <td>212400</td>
+                                <td>2024-2025<br>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Dr Rajakumar R<br>Dr Padamanaban R (SCOPE)</td>
+                                <td>Development of Website</td>
+                                <td>Geeyem Ventures</td>
+                                <td>60770</td>
+                                <td>2024-2025<br>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Dr. Raghukiran N<br>Dr. Lenin Babu M C (SMEC)<br>Mr. Vimal Prasanth C S</td>
+                                <td>3D Printing</td>
+                                <td>GISTETS</td>
+                                <td>23600</td>
+                                <td>2024-2025<br>Completed</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Dr.Jegadeeshwaran<br>Dr.Rajakumar<br>Dr.Vijayaprabhakaran (SCOPE)<br>Dr.Sakthivel (SMEC)<br>Dr.Sivakumar (SMEC)<br>Mr.Vimal Prsanth C S</td>
+                                <td>Development of Assembly Line Inspection System</td>
+                                <td>TAFE Tractors and Farm Equipment Ltd., Chennai</td>
+                                <td>324500</td>
+                                <td>2024-2025<br>On-going</td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Dr. Jegadeeshwaran<br>Dr. Murali Mohan G (SMEC)<br>Dr. Sakthivel G (SMEC)<br>Dr. Sivakumar R (SMEC)</td>
+                                <td>Driving Simulator Training</td>
+                                <td>Jayalakshmi Driving School</td>
+                                <td>115640</td>
+                                <td>2024-2025<br>Completed</td>
+                            </tr>
+                            <!-- ...continue the rest of the rows in the same format... -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- ...existing code... -->
+
+                <!-- Journal Publications Section -->
+                <h3 style="margin-top:32px;">Journal Publications (Categorized by Year)</h3>
+                <div class="journal-publications-table-wrapper">
+                    <table class="journal-publications-table">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>S. No</th>
+                                <th>Paper Details</th>
+                                <th>Impact Factor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 2025 -->
+                            <tr>
+                                <td>2025</td>
+                                <td>1</td>
+                                <td>K Balachandar, R Jegadeeshwaran, G Sakthivel, T Mohanraj. (2025). Condition monitoring of Friction Stir Welding tool with vibration signals using support vector machine classifiers. Engineering Research Express, 7(1), 015564.</td>
+                                <td>1.5</td>
+                            </tr>
+                            <!-- 2024 -->
+                            <tr>
+                                <td rowspan="11">2024</td>
+                                <td>1</td>
+                                <td>Jayalatchumy, D., Ramalingam, R., Balakrishnan, A., Safran, M., & Alfarhood, S. (2024). Improved Crow Search-Based Feature Selection and Ensemble Learning for IoT Intrusion Detection. IEEE Access, 12, 33218–33235.</td>
+                                <td>3.4</td>
+                            </tr>
+                            <tr><td>2</td><td>Kaliyannan, D., Thangamuthu, M., Pradeep, P., Gnansekaran, S., Rakkiyannan, J., & Pramanik, A. (2024). Tool Condition Monitoring in the Milling Process Using Deep Learning and Reinforcement Learning. Journal of Sensor and Actuator Networks, 13(4).</td><td>3.3</td></tr>
+                            <tr><td>3</td><td>Rekha, D., & Kaliyappan, H.K. (2024). Collaborative robot acting as scrub nurse for cataract surgery (CRASCS). Journal of Robotic Surgery, 18(1).</td><td>2.2</td></tr>
+                            <tr><td>4</td><td>Thirugnanasambandam, K., Murugan, J., Ramalingam, R., Rashid, M., Raghav, R.S., Kim, T.-H., Sampedro, G.A., & Abisado, M. (2024). Optimizing multimodal feature selection using binary reinforced cuckoo search algorithm for improved classification performance. PeerJ Computer Science, 10.</td><td>3.5</td></tr>
+                            <tr><td>5</td><td>R, S., G, S., T, M., J, L., R, J., P, M., & YS, G. (2024). Solar thermal cooking device for domestic cooking applications: Bridging sustainable development goals and innovation. Heliyon, 10(19).</td><td>3.4</td></tr>
+                            <tr><td>6</td><td>Deepak, Pitchaimani, J., Nadimpalli, R., & Mailan Chinnapandi, L.B. (2024). Exploring the acoustic potential of 3D printed micro-perforated panels: A comparative analysis. Heliyon, 10(7).</td><td>3.4</td></tr>
+                            <tr><td>7</td><td>Subashini, M., & Sumathi, V. (2023). Smart algorithms for power prediction in smart EV charging stations. Journal of Engineering Research (Kuwait).</td><td>0.9</td></tr>
+                            <tr><td>8</td><td>Balachandar, K., & Jegadeeshwaran, R. (2024). Enhancing Friction Stir Welding: Quality Machine Learning Based Friction Stir Welding Tool Condition Monitoring, International Research Journal of Multidisciplinary Technovation, 6(3), 245–259.</td><td>0</td></tr>
+                            <tr><td>9</td><td>Henge, S.K., Rajakumar, R., Prasanna, P., Parivazhagan, A., Hu, Y.-C., & Chen, W.-L. (2024). Multi-layered access control based auto tuning relational key implications in enterprise-level multi-tenancy. Multimedia Tools and Applications.</td><td>3</td></tr>
+                            <tr><td>10</td><td>J, M.A., & V, S. (2024). Implementation and proficiency analysis of enhanced graph algorithm for DC microgrid applications. Scientific Reports, 14(1).</td><td>3.8</td></tr>
+                            <tr><td>11</td><td>T. Prasath, V. Sumathi (2024). Pipelined deep learning architecture for the detection of Alzheimer’s disease, Biomedical Signal Processing and Control, Volume 87, Part A, 2024, 105442</td><td></td></tr>
+                            <!-- 2023 -->
+                            <tr>
+                                <td rowspan="13">2023</td>
+                                <td>1</td>
+                                <td>Rajaguru, V., & Annapoorani, K. I. (2023). Virtual synchronous generator-based superconducting magnetic energy storage unit for load frequency control of micro-grid using African vulture optimization algorithm. Journal of Energy Storage, 65.</td>
+                                <td>8.9</td>
+                            </tr>
+                            <tr><td>2</td><td>Natarajan, S., Thangamuthu, M., Gnanasekaran, S., & Rakkiyannan, J. (2023). Digital twin-driven tool condition monitoring for the milling process. Sensors, 23(12).</td><td>3.4</td></tr>
+                            <tr><td>3</td><td>Gopu, A., Thirugnanasambandam, K., R., R., AlGhamdi, A. S., Alshamrani, S. S., Maharajan, K., & Rashid, M. (2023). Energy-efficient virtual machine placement in distributed cloud using NSGA-III algorithm. Journal of Cloud Computing, 12(1).</td><td>3.7</td></tr>
+                            <tr><td>4</td><td>Mageshkumar, N., Swapna, J., Pandiaraj, A., Rajakumar, R., Krichen, M., & Ravi, V. (2023). Hybrid cloud storage system with enhanced multilayer cryptosystem for secure deduplication in cloud. International Journal of Intelligent Networks, 4, 301-309.</td><td>0</td></tr>
+                            <tr><td>5</td><td>K., I. A., V., R., N., V., & Rajasri, P. (2023). Solar forecasting for a PV-battery powered DC system. Heliyon, 9(10).</td><td>3.4</td></tr>
+                            <tr><td>6</td><td>Gnanasekaran, S., Jakkamputi, L. P., Rakkiyannan, J., Thangamuthu, M., & Bhalerao, Y. (2023). A comprehensive approach for detecting brake pad defects using histogram and wavelet features with nested dichotomy family classifiers. Sensors, 23(22).</td><td>3.4</td></tr>
+                            <tr><td>7</td><td>N., A., Jakkamputi, L. P., Gnanasekaran, S., Thangamuthu, M., Rakkiyannan, J., & Bhalerao, Y. J. (2023). Dynamic behavior modeling of natural-rubber/polybutadiene-rubber-based hybrid magnetorheological elastomer sandwich composite structures. Polymers, 15(23).</td><td>4.7</td></tr>
+                            <tr><td>8</td><td>Karunanidy, D., Ramalingam, R., Basheer, S., Mahadevan, N., & Rashid, M. (2023). MOJMA: A novel multi-objective optimization algorithm based Java Macaque behavior model. AIMS Mathematics, 8(12), 30244-30268.</td><td>1.8</td></tr>
+                            <tr><td>9</td><td>Abdullah, J. M., & Sumathi, V. (2023). An overview and minimum fault ramp rate analysis of impedance-based circuit breaker topologies. IEEE Access, 11, 145042-145055.</td><td>3.4</td></tr>
+                            <tr><td>10</td><td>Sumathi, V., Mohamed Abdullah, J., Senthil, R., & Prema, E. (2023). Smart child tracking system. Smart Grids for Smart Cities, 2, 1-9.</td><td>0</td></tr>
+                            <tr><td>11</td><td>Sumathi, V., & Subashini, M. (2023). Smart trash can. Smart Grids for Smart Cities, 2, 65-74.</td><td>0</td></tr>
+                            <tr><td>12</td><td>Subashini, M., Vijayan, S. (2023). Smart charging for zero-emission vehicles: A comprehensive review. Renewable Energy Focus, 46, 57–67.</td><td>4.2</td></tr>
+                            <tr><td>13</td><td>T.P., V.S. (2023). Identification of Alzheimer’s disease by imaging: A comprehensive review. International Journal of Environmental Research and Public Health, 20(2).</td><td>0</td></tr>
+                            <!-- 2022 -->
+                            <tr>
+                                <td rowspan="14">2022</td>
+                                <td>1</td>
+                                <td>Senthil, R., Sumathi, V., Tamilselvi, A., Kavukcu, S.B., Aruni, A.W. Functionalized electrospun nanofibers for high efficiency removal of particulate matter. Scientific Reports, 12(1). https://doi.org/10.1038/s41598-022-12505-w</td>
+                                <td>3.8</td>
+                            </tr>
+                            <tr><td>2</td><td>Hanumegowda, P.K., Gnanasekaran, S. Prediction of work-related risk factors among bus drivers using machine learning. International Journal of Environmental Research and Public Health, 19(22). https://doi.org/10.3390/ijerph192215179</td><td>0</td></tr>
+                            <tr><td>3</td><td>Jakkamputi, L., Devaraj, S., Marikkannan, S., Gnanasekaran, S., Ramasamy, S., Rakkiyannan, J., Xu, Y. Experimental and computational vibration analysis for diagnosing the defects in high performance composite structures using machine learning approach. Applied Sciences (Switzerland), 12(23). https://doi.org/10.3390/app122312100</td><td>2.5</td></tr>
+                            <tr><td>4</td><td>Senthil, R., Kavukcu, S.B., Aruni, A.W., Dandar, U., Basaran, B., Sumathi, V. Utilization of leather fibrous wastes for the production of reconstituted fibric materials: heavy metal determination and removal. Waste Disposal and Sustainable Energy, 4(1), 29-37. https://doi.org/10.1007/s42768-022-00093-4</td><td>3.6</td></tr>
+                            <tr><td>5</td><td>Gnanasekaran, S., Jakkamputi, L., Thangamuthu, M., Marikkannan, S.K., Rakkiyannan, J., Thangavelu, K., Kotha, G. Condition monitoring of an all-terrain vehicle gear train assembly using deep learning algorithms with vibration signals. Applied Sciences (Switzerland), 12(21). https://doi.org/10.3390/app122110917</td><td>2.5</td></tr>
+                            <tr><td>6</td><td>Saravanakumar, D., Sakthivel, G., Jegadeeshwaran, R., Pathi, J.L., Kumar, M.M., Muthuramalingam, T. Assessment of vehicle handling performance of drivers using machine learning algorithms. IEEE Access, 10, 132288-132297. https://doi.org/10.1109/ACCESS.2022.3230678</td><td>3.4</td></tr>
+                            <tr><td>7</td><td>Senthil Kumar, M., Sakthivel, G., Jagadeeshwaran, R., Lakshmipathi, J., Vanmathi, M., Mohanraj, T., Admassu, Y. Development of eco-sustainable silica-reinforced natural hybrid polymer composites for automotive applications. Advances in Materials Science and Engineering, 2022. https://doi.org/10.1155/2022/5924457</td><td>0</td></tr>
+                            <tr><td>8</td><td>Marimuthu, A.M.T., Rakkiyannan, J., Jakkamputi, L., Vaithiyanathan, S., Gnanasekaran, S. Vibration-based fault diagnosis study on a hydraulic brake system using fuzzy logic with histogram features. SDHM Structural Durability and Health Monitoring, 16(4), 383-396. https://doi.org/10.32604/SDHM.2022.011396</td><td>0</td></tr>
+                            <tr><td>9</td><td>Sumathi, V., Mohamed Abdullah, J. Smart automation for production of Panchagavya natural fertilizer. Agronomy, 12(12). https://doi.org/10.3390/agronomy12123044</td><td>3.3</td></tr>
+                            <tr><td>10</td><td>Hanumegowda, P.K., Gnanasekaran, S. Risk factors and prevalence of work-related musculoskeletal disorders in metropolitan bus drivers: An assessment of whole body and hand-arm transmitted vibration. Work, 71(4), 951-973. https://doi.org/10.3233/WOR-205007</td><td>1.7</td></tr>
+                            <tr><td>11</td><td>R., J., G., S., D., S., T., M.A.M., R., S. Application of artificial immune recognition system for monitoring the brake system using vibration-based statistical learning. IEEE Consumer Electronics Magazine. https://doi.org/10.1109/MCE.2021.3115731</td><td>3.7</td></tr>
+                            <tr><td>12</td><td>Inamdar, J.J., Iyswarya Annapoorani, K. Terminal sliding mode control for dynamic voltage restorer. Distributed Generation and Alternative Energy Journal, 37(3), 771-792. https://doi.org/10.13052/dgaej2156-3306.37318</td><td>0</td></tr>
+                            <tr><td>13</td><td>Kumar, M.S., Sakthivel, G., Thiyagarajan, R., Vanmathi, M., Mangalaraja, R.V., Ismail, M., Elayaperumal, A. Synthesis and characterization of cordierite and cordierite-zirconia by conventional approach. Journal of Ovonic Research, 18(4), 609-615. https://doi.org/10.15251/JOR.2022.184.609</td><td>0.9</td></tr>
+                            <tr><td>14</td><td>Kumar, M.S., Sakthivel, G., Vanmathi, M. A systematic review on current status of zirconia bonding with novel silane couplant for dental restorations. Silicon.</td><td>2.67</td></tr>
+                            <!-- 2021 -->
+                            <tr>
+                                <td rowspan="6">2021</td>
+                                <td>1</td>
+                                <td>Khairnar, A., Patange, A., Pardeshi, S., Jegadeeshwaran, R., 2021. Supervision of carbide tool condition by training of vibration-based statistical model using boosted trees ensemble. Int. J. Performability Eng. 17(2), 229-240.</td>
+                                <td>0</td>
+                            </tr>
+                            <tr><td>2</td><td>Senthil Kumar, M., Vanmathi, M., Sakthivel, G., 2021. SiC reinforcement in the synthesis and characterization of A356/AL2O3/SiC/Gr reinforced composite—paving a way for the next generation of aircraft applications. Silicon.</td><td>2.67</td></tr>
+                            <tr><td>3</td><td>Hanumegowda, P.K., Gnanasekaran, S., Subramaniam, S., Honnappa, A., 2021. Occupational physical risk factors and prevalence of musculoskeletal disorders among the traditional lacquerware toy makers of South India. Work 70(2), 405-418.</td><td>1.7</td></tr>
+                            <tr><td>4</td><td>Kumar, H.S., Kambhampati, K.A., Rakkiyannan, J., Gnanasekaran, S., 2021. Brake health prediction using logitboost classifier through vibration signals - a machine learning framework. Int. J. Progn. Health Manag. 12(2), 1-8.</td>
+                                <td>1.4</td></tr>
+                            <tr><td>5</td><td>Ferdaus, F., Kumar, N., Sakthivel, G., Raghukiran, N., 2021. Stage reduced counter-rotating axial compressor for jet engine. Int. J. Simul. Multidiscip. Des. Optim. 12.</td><td>0</td></tr>
+                            <tr><td>6</td><td>Ferdaus, F., Raghukiran, N., 2021. Evaluation of the RANS turbulence model predictive capability of flat plate film cooling. IOP Conf. Ser.: Earth Environ. Sci. 850(1), https://doi.org/10.1088/1755-1315/850/1/012020</td><td>0</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="info-card-details" id="card-conference-papers" hidden>
+    <h3>Conference Papers Published in Journals</h3>
+    <div style="overflow-x:auto;">
+        <table class="journal-publications-table" style="min-width:600px">
+            <thead>
+                <tr>
+                    <th style="width:60px;">S. No</th>
+                    <th>Paper Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Adarsh, M. S., Aaron, B., Shubhang, B., Sumathi, V., Sakthivel, G., & Jegadeeshwaran, R. (2023). AI-enabled drones for detecting injured animals in wildlife. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>2</td><td>Marikkannan, S. K., Gnanasekaran, S., Rakkiyannan, J., Veluchamy, M., Subramanian, P., & Sujatha, V. I. (2023). Heat treatment effect on sensitization behavior of 304-grade stainless steel. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>3</td><td>Subramaniam, R., Subramanian, S., Krishnamurthy, B., Rakkiyannan, J., Gnanasekaran, S., & Bhalerao, Y. (2023). Brake fault diagnosis using histogram features and artificial immune recognition system (AIRS). <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>4</td><td>Brindha, B., & Annapoorani, K. I. (2023). Design of bidirectional resonant converter for EV application. <i>Journal of Physics: Conference Series, 2601</i>.</td></tr>
+                <tr><td>5</td><td>Manickavasagam, P., Naveen, B., Sakthivel, G., Jegadeeshwaran, R., Annapoorani, K. I., Maheswari, C., & Elamvazuthi, I. A. (2023). Mathematical modelling & simulation of crossbreed smart electric powertrain (a smart electric powertrain for e-bikes). <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>6</td><td>Sreenivasulu, G. Y., Palanisamy, K., Devaraj, S., Gnanasekaran, S., Annapoorani, I., & Elamvazuthi, I. A. (2023). Development of autonomous mobile robot with defined path control using intelligent robot operating system. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>7</td><td>Jaya Shankar, R., Lakshmipathi, J., Raghukiran, N., Manickavasagam, P., Govardhan, Y. S., & Sakthivel, G. (2023). Design and optimization of axial flux permanent magnet alternator for onboard power generation in two-wheeler applications. <i>Journal of Physics: Conference Series, 2601</i>.</td></tr>
+                <tr><td>8</td><td>Nitharshan, V. R., Rakkiannan, J., Gnanasekaran, S., Jakkampatti, L., Devaraj, S., & Bhalerao, Y. J. (2023). Switching of battery and charging the subsequent one in vehicle. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>9</td><td>Sumathi, V., Prasath, T., Anusha, K., Prema, E., Jegadeeshwaran, R., & Senthilkumar, M. (2023). A novel method for noise elimination in ECG signals. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>10</td><td>Annapoorani, K.I., Rajaguru, V., Gautam, I., Saraswat, R., Pathak, A. (2023). Design and implementation of coupled inductor-based high gain DC/DC converter. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>11</td><td>Tanya, Sumathi, V., Prema, E., Rajeswari, G.R., Saravanakumar, D., Senthilkumar, M. (2023). Intelligent access control system for safety-critical areas. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>12</td><td>Palakurthi, V.R.K., Jakkampudi, L., Rakkiannan, J., Gnanasekaran, S., Nadimpalli, R., Bhalerao, Y.J. (2023). Identifying structural defects in 3D printed material using image processing through machine learning. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>13</td><td>Dubey, H., Tanwar, H., Dhiman, T., Nadimpalli, R., Jakkampudi, L., Marikkannan, S., Ramasamy, S. (2023). Custom-built patient-specific 3D printed antimicrobial cast for vulnerable fractures. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>14</td><td>Krishnamurthy, B., Rakkiannan, J., Jakkampudi, L., Devaraj, S., Marikkannan, S., Ramasamy, S. (2023). Condition monitoring of FSW tool using statistical approach. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>15</td><td>Sharanraj, K., Lakshmipathi, J., Saravanakumar, D., Manickavasagam, P., Govardhan, Y.S., Sakthivel, G., Jegadeeshwaran, R. (2023). Development of modular wheel for bicycle electrification. <i>J. Phys.: Conf. Ser. 2601</i></td></tr>
+                <tr><td>16</td><td>Sumathi, V., Senthil, R., Rajeswari, G.R., Prasath, T., Sakthivel, G., Raghukiran, N. (2023). Low-cost smart jacket. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>17</td><td>Akhtar, A., Muthuramalingam, T., Elsheikh, A.H., Saravanakumar, D. (2023). A review on artificial intelligence-based control techniques on controlling BLDC motor measures. <i>AIP Conference Proceedings, 2788(1)</i>.</td></tr>
+                <tr><td>18</td><td>Sumathi, V., Archana, A., Senthil, R., Adarsh, J.K., Nabeel, M. (2023). Study of ripening stages of mango by image processing techniques. <i>J. Phys.: Conf. Ser. 2601</i></td></tr>
+                <tr><td>19</td><td>Subashini, M., Mohamed Abdullah, J., Adarsh, J.K., Senthil, R., Sumathi, V. (2023). Optimal power management for sustainable multipurpose smart EV charging stations. <i>J. Phys.: Conf. Ser. 2601.</i></td></tr>
+                <tr><td>20</td><td>Iyswarya Annapoorani, K., Rajaguru, V., Anantha Padmanabhan, S., Manoj Kumar, K., Venkatachalam, S. Fuzzy logic-based integral controller for load frequency control in an isolated micro-grid with superconducting magnetic energy storage unit. <i>Materials Today: Proceedings.</i></td></tr>
+                <tr><td>21</td><td>Patange, A.D., Jegadeeshwaran, R., 2021. Review on tool condition classification in milling: A machine learning approach. <i>Mater. Today Proc. 46, 1106–1115.</i></td></tr>
+                <tr><td>22</td><td>Khade, H.S., Patange, A.D., Pardeshi, S.S., Jegadeeshwaran, R., 2021. Design of bagged tree ensemble for carbide-coated inserts fault diagnosis. <i>Mater. Today Proc. 46, 1283–1289.</i> https://doi.org/10.1016/j.matpr.2021.02.128</td></tr>
+                <tr><td>23</td><td>Virendra Dahe, S., Sai Manikandan, G., Jegadeeshwaran, R., Sakthivel, G., Lakshmipathi, J., 2021. Tool condition monitoring using Random forest and FURIA through statistical learning. <i>Mater. Today Proc. 46, 1161–1166.</i></td></tr>
+                <tr><td>24</td><td>Bolbhat, S.S., Bhosale, A.S., Sakthivel, G., Saravanakumar, D., Sivakumar, R., Lakshmipathi, J., 2021. Intelligent obstacle avoiding AGV using vector field histogram and supervisory control. <i>J. Phys.: Conf. Ser. 1716(1),</i></td></tr>
+                <tr><td>25</td><td>Pranesh, H., Suresh, K., Manian, S.S., Jegadeeshwaran, R., Sakthivel, G., Alamelu Manghi, T.M., 2021. Vibration-based brake health prediction using statistical features – A machine learning framework. <i>Mater. Today Proc. 46, 1167–1173.</i></td></tr>
+                <tr><td>26</td><td>Ajayram, K.A., Jegadeeshwaran, R., Sakthivel, G., Sivakumar, R., Patange, A.D., 2021. Condition monitoring of carbide and non-carbide coated tool insert using decision tree and random tree – A statistical learning. <i>Mater. Today Proc. 46, 1201–1209.</i></td></tr>
+                <tr><td>27</td><td>Balachandar, K., Jegadeeshwaran, R., Lakshmipathi, J., Saravanakumar, D., 2021. Friction stir welding tool condition prediction using vibrational analysis through machine learning – A review. <i>J. Phys.: Conf. Ser. 1969(1),</i></td></tr>
+                <tr><td>28</td><td>Rajaguru, V., Annapoorani, I., 2021. Automatic load frequency control in an isolated micro-grid with superconducting magnetic energy storage unit using integral controller. <i>J. Phys.: Conf. Ser. 1969(1).</i></td></tr>
+                <tr><td>29</td><td>Srinivasan, N.R., Chamala Vaishnavi, J., Varun Darshan, B.L., Srajaysikhar, D., Sakthivel, G., Raghukiran, N., 2021. Enhancement of an electric drill body using design for additive manufacturing. <i>J. Phys.: Conf. Ser. 1969(1).</i></td></tr>
+                <tr><td>30</td><td>Wagh, M.N., Alamelu Manghi, T.M., Jegadeeshwaran, R., Saravanakumar, D., Raghukiran, N., 2021. Application of Meta family classifiers for monitoring hydraulic brake system using vibration-based statistical learning approach. <i>J. Phys.: Conf. Ser. 1969(1).</i></td></tr>
+                <tr><td>31</td><td>Manoj Srivatsn, S., Vamsi Venkata Sai Kumar, V., Sakthivel, G., Saravanakumar, D., Raghu Kiran, N., 2021. Analysis of fuzzy and PID control in pacemaker with cardiovascular model. <i>J. Phys.: Conf. Ser. 1969(1).</i></td></tr>
+                <tr><td>32</td><td>Balaji, S., Nanavate, A.K., Jakkamputi, L.P., Raghukiran, N., Jegadeeshwaran, R., 2021. Dynamic characterisation of honeycomb CNT reinforced sandwich composite structure. <i>J. Phys.: Conf. Ser. 1969(1).</i></td></tr>
+                <tr><td>33</td><td>Govardhan, Y.S., Sai, D.M., Sakthivel, G., Raghukiran, N., Saravanakumar, D., 2021. Smart frontal safety system for automobiles. <i>J. Phys.: Conf. Ser. 1969(1).</i></td></tr>
+                <tr><td>34</td><td>Karthikeyan, G., Naveen, M., Jegadeeshwaran, R., Sakthivel, G., Saravanakumar, D., Lakshmipathi, J., 2021. Product defect categorization using machine vision through machine learning. <i>J. Phys.: Conf. Ser. 1716(1).</i></td></tr>
+                <tr><td>35</td><td>Bisht, V., Saravanakumar, D., Sakthivel, G., Sivakumar, R., 2021. Yaw moment compensation by actuator-based control of brake system in automobiles. <i>J. Phys.: Conf. Ser. 1969(1).</i></td></tr>
+                <tr><td>36</td><td>Muthukumar, M., Arjun, S.V., Saravanakumar, D., Sakthivel, G., Jegadeeshwaran, R., 2021. Modelling and control of air bellow-based active suspension system. <i>J. Phys.: Conf. Ser. 1716(1).</i></td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <!-- Publications & Collaborations Cards Section -->
+    <section id="info-cards" class="info-cards-section">
+        <div class="container">
+            <div class="info-cards-grid">
+                <div class="info-card" data-card="journal-publications">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Journal Publications</h3>
+                </div>
+                <div class="info-card" data-card="conference-papers">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Conference Papers Published in Journals</h3>
+                </div>
+                <div class="info-card" data-card="patents">
+                    <i class="fas fa-certificate"></i>
+                    <h3>Patent Details</h3>
+                </div>
+                <div class="info-card" data-card="international-collaborations">
+                    <i class="fas fa-globe"></i>
+                    <h3>International Collaborations</h3>
+                </div>
+            </div>
+            <!-- Details Panels -->
+            <div class="info-card-details" id="card-journal-publications" hidden>
+                <h3>Journal Publications</h3>
+                <div class="journal-publications-overview-table-wrapper">
+        <table class="journal-publications-overview-table">
+            <thead>
+                <tr>
+                    <th>Particulars</th>
+                    <th>2020</th>
+                    <th>2021</th>
+                    <th>2022</th>
+                    <th>2023</th>
+                    <th>2024</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Total Journal Publications</td>
+                    <td>82</td>
+                    <td>22</td>
+                    <td>15</td>
+                    <td>32</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>No of Papers</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>11</td>
+                    <td>8</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>No. of papers with UG/PG</td>
+                    <td></td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>Conference Paper Publications</td>
+                    <td>2</td>
+                    <td>8</td>
+                    <td></td>
+                    <td>13</td>
+                    <td>–</td>
+                </tr>
+                <tr>
+                    <td>Conference Paper Publications with UG/PG</td>
+                    <td></td>
+                    <td>9</td>
+                    <td></td>
+                    <td>8</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Book Chapters</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2</td>
+                    <td>–</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div style="text-align:center; margin-top: 24px;">
+        <a href="journal-publications.html" class="cta-primary ripple" style="display:inline-block; padding:10px 28px; font-size:1.08rem; border-radius:6px; background:#1976d2; color:#fff; text-decoration:none; font-weight:500;">
+            More Info
+            <i class="fas fa-arrow-right" style="margin-left:8px;"></i>
+        </a>
+    </div>
+</div>
+
+
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+    <style>
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 24px;
+            padding-top: 24px;
+            padding-bottom: 8px;
+        }
+        .footer-section {
+            flex: 1 1 250px;
+            min-width: 220px;
+        }
+        .footer-section h3 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            font-weight: 600;
+        }
+        .footer-section p, .footer-section address {
+            margin: 0 0 8px 0;
+            font-size: 0.98em;
+        }
+        .footer-icons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .footer-icons i {
+            font-size: 1.6em;
+            transition: color 0.2s;
+        }
+        .footer-contact-icon {
+            color: var(--footer-icon, #444);
+            margin-right: 8px;
+            font-size: 1.4em;
+            vertical-align: middle;
+        }
+        .footer-icons .fa-envelope { color: var(--footer-icon, #0077b5); }
+        .footer-icons .fa-phone { color: var(--footer-icon, #28a745); }
+        .footer-icons .fa-linkedin { color: var(--footer-icon, #0077b5); }
+        .footer-icons .fa-twitter { color: var(--footer-icon, #1da1f2); }
+        .footer-icons .fa-facebook { color: var(--footer-icon, #1877f3); }
+        .footer-icons a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .footer-bottom {
+            border-top: 1px solid #e0e0e0;
+            margin-top: 12px;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 0.97em;
+            color: #666;
+        }
+        @media (max-width: 700px) {
+            .footer-content {
+                flex-direction: column;
+                gap: 0;
+            }
+            .footer-section {
+                margin-bottom: 16px;
+            }
+        }
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            .footer-bottom {
+                border-top: 1px solid #333;
+                color: #bbb;
+            }
+            .footer-section,
+            .footer-section address,
+            .footer-section h3 {
+                color: #eee;
+            }
+            .footer-icons .fa-envelope { color: #4fc3f7; }
+            .footer-icons .fa-phone { color: #81c784; }
+            .footer-contact-icon { color: #bbb; }
+        }
+    </style>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3><i class="fas fa-user-tie footer-contact-icon"></i>Deputy Director</h3>
+                <address>
+                    Centre for e-Automation Technologies (CeAT),<br>
+                    Vellore Institute of Technology,<br>
+                    Vandalur – Kelambakkam Road, Chennai,<br>
+                    Tamil Nadu – 600 127
+                </address>
+            </div>
+            <div class="footer-section" style="text-align:right;">
+                <div class="footer-icons">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:dydircc.cfa@vit.ac.in">dydircc.cfa@vit.ac.in</a>
+                </div>
+                <div class="footer-icons">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+914439931555">+91 44 3993 1555</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 Centre for e-Automation Technologies. All rights reserved.
+        </div>
+    </div>
+</footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal" aria-modal="true" role="dialog" tabindex="-1">
+        <div class="modal-content">
+            <span class="close-modal" id="closeContactModal" aria-label="Close">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contactForm" autocomplete="off">
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="cta-primary ripple">Send</button>
+                <div class="form-message" id="formMessage"></div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
